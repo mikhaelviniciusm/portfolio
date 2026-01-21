@@ -197,7 +197,7 @@ section {
 
 @media (max-width: 900px) {
   section {
-    scroll-margin-top: 370px;
+    scroll-margin-top: 420px;
   }
 }
 
@@ -1091,6 +1091,7 @@ footer p {
   .navbar {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     width: 100%;
     grid-column: 1 / -1;
     grid-row: 2;
@@ -1113,8 +1114,8 @@ footer p {
     transform: scaleY(1);
     visibility: visible;
     pointer-events: auto;
-    margin-top: 6px;
-    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 10px;
     padding: 8px 12px;
     border: 1px solid var(--header-border);
     transition: transform 0.3s ease, max-height 0.3s ease, background-color 0.6s ease, border-color 0.6s ease;
@@ -1142,7 +1143,7 @@ footer p {
     padding: 20px 0;
   }
   .navbar div {
-    padding: 14px 12px;
+    padding: 0px 12px;
   }
   .navbar a {
     font-size: 17px;
