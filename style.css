@@ -1,0 +1,16 @@
+/* Estilos para o tema claro */
+:root {
+    --background-color: white;
+    --text-color: black;
+}
+
+/* Estilos para o tema escuro */
+[data-theme='dark'] {
+    --background-color: black;
+    --text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
