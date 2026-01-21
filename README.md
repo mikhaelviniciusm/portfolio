@@ -1,4 +1,4 @@
-# Portfolio | Mikhael
+# Portfólio | Mikhael
 
 Site estático em HTML, CSS e JavaScript para apresentar informações, projetos e contato, com modo claro/escuro e navegação responsiva.
 
@@ -56,4 +56,4 @@ git push -u origin main
 - Interação: personalize animações e comportamento em js/main.js.
 
 ## Licença
-Este projeto está licenciado sob a licenca MIT. Consulte LICENSE.
+Este projeto está licenciado sob a licença MIT. Consulte LICENSE.
