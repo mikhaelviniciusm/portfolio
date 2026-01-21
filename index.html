@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portifólio de Mikhael</title>
+  </head>
+  
+  <body>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img class="logo-light" src="assets/header/logo-light.svg" alt="Logo" />
+          <img class="logo-dark" src="assets/header/logo-dark.svg" alt="Logo" />
+        </div>
+        <div class="nav-actions">
+          <div class="navbar" id="primary-nav" role="navigation">
+            <div><a href="#home">Início</a></div>
+            <div><a href="#about">Sobre mim</a></div>
+            <div><a href="#projects">Projetos</a></div>
+            <div><a href="#education">Formação</a></div>
+            <div><a href="#experience">Experiência</a></div>
+            <div><a href="#contact">Contato</a></div>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" data-theme-toggle>
+            <img class="theme-icon sun" src="assets/header/sun.svg" alt="Ícone do sol" aria-hidden="true" />
+            <img class="theme-icon moon" src="assets/header/moon.svg" alt="Ícone da lua" aria-hidden="true" />
+            <span class="theme-ripple" aria-hidden="true"></span>
+          </button>
+          <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menu">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Seção Início -->
+    <section id="home" class="container home">
+      <div class="avatar">
+        <img src="assets/home/avatar.png" alt="Avatar" />
+      </div>
+      <div class="home-text">
+        <h1>Olá Mundo!<br /> Eu sou o <span>Mikhael.</span></h1>
+        <div class="home-btn">
+          <button class="btn-primary"><img src="assets/projects/external-link.svg" alt="Currículo">Currículo</button>
+            <a href="https://github.com/mikhaelviniciusm" class="btn-secondary" target="_blank" rel="noopener noreferrer"><img src="assets/projects/github.svg" alt="GitHub">GitHub</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Sobre Mim -->
+    <section id="about" class="container about-me">
+      <h2 class="primary-heading heading-education">Sobre mim</h2>
+      <p>
+        Sou apaixonado por tecnologia e por transformar ideias em produtos digitais úteis e bonitos. Meu foco é desenvolvimento web, com interesse em front-end e integração com back-end. Curto criar interfaces acessíveis, performáticas e fáceis de manter.
+      </p>
+      <p>
+        Fora do código, curto cultura pop, filmes, séries, música e games — referências que levo para a forma como penso experiências digitais. Estou sempre estudando e evoluindo minhas habilidades com projetos práticos.
+      </p>
+      <ul>
+        <li>Stack atual: HTML, CSS, JavaScript, React e Node.js</li>
+        <li>Interesses: design de interfaces, acessibilidade e boas práticas</li>
+        <li>Objetivo: construir aplicações web escaláveis e agradáveis de usar</li>
+      </ul>
+    </section>
+
+    <!-- Seção Stacks Mais Usadas -->
+    <section id="skills" class="container experience-with">
+      <h2 class="primary-heading">Stacks mais usadas</h2>
+      <div class="experience-with-lang">
+        <div class="skill" aria-label="HTML5">
+          <img class="skill-icon" src="assets/skills/html5.svg" alt="HTML5 icon" />
+          <span class="skill-label">HTML5</span>
+        </div>
+        <div class="skill" aria-label="CSS3">
+          <img class="skill-icon" src="assets/skills/css3.svg" alt="CSS3 icon" />
+          <span class="skill-label">CSS3</span>
+        </div>
+        <div class="skill" aria-label="JavaScript">
+          <img class="skill-icon" src="assets/skills/javascript.svg" alt="JavaScript icon" />
+          <span class="skill-label">JavaScript</span>
+        </div>
+        <div class="skill" aria-label="React">
+          <img class="skill-icon" src="assets/skills/react.svg" alt="React icon" />
+          <span class="skill-label">React</span>
+        </div>
+        <div class="skill" aria-label="Node.js">
+          <img class="skill-icon" src="assets/skills/nodejs.svg" alt="Node.js icon" />
+          <span class="skill-label">Node.js</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="container">
+      <h2 class="primary-heading">Projetos</h2>
+      <div class="projects">
+        
+        <div class="project-item">
+          <img src="assets/projects/portifolio.png" alt="Projeto de Portifólio" />
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Portifólio</h3>
+            </div>
+            <p class="project-description">Portfólio pessoal desenvolvido com HTML, CSS e JavaScript para apresentar projetos, habilidades e contato. Foco em design responsivo, acessibilidade e experiência do usuário.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-project"><img src="assets/projects/external-link.svg" alt="Botão Demo">Demo</a>
+              <a href="LINK" class="btn-project github"><img src="assets/projects/github.svg" alt="Botão GitHub">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="assets/projects/lexis.png" alt="Projeto Lexis" />
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Lexis</h3>
+            </div>
+            <p class="project-description">Biblioteca virtual com separação de classes, com funcionalidades como controle de acervo e visualização de relatórios para administradores e leitor de livros para usuários comuns.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Express</span>
+              <span class="tag">Metabase</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/orgs/lexis-books/repositories" class="btn-project github"><img src="assets/projects/github.svg" alt="Botão GitHub">GitHub</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-item">
+          <img src="assets/projects/checkmate.png" alt="Projeto CheckMate" />
+          <div class="project-content">
+            <div class="project-header">
+              <h3>CheckMate</h3>
+            </div>
+            <p class="project-description">Aplicativo simples para gerenciamento de tarefas, onde você pode adicionar, marcar como concluídas e gerenciar o status das suas tarefas.</p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Android</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/mikhaelviniciusm/CheckMate" class="btn-project github"><img src="assets/projects/github.svg" alt="Botão GitHub">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Formação -->
+    <section id="education" class="container">
+      <h2 class="primary-heading">Formação</h2>
+      <div class="card-items">
+        <div class="card-item">
+          <div class="card-header">
+            <div class="card-content">
+              <div><img src="assets/education/unichristus-logo.png" alt="Logo Unichristus" /></div>
+              <div class="card-info">
+                <div class="card-title">Análise e Desenvolvimento de Sistemas</div>
+                <div class="card-subtitle">Universidade Christus</div>
+              </div>
+            </div>
+            <div class="card-date">2023 - Presente</div>
+          </div>
+          <p>
+            Graduação em Análise e Desenvolvimento de Sistemas na Unichristus, com foco em desenvolvimento de softwares, aplicativos móveis, sistemas web e linguagens como JavaScript, Python e Java. O curso enfatiza raciocínio lógico, resolução de problemas reais, programação para Android, SQL e tecnologias como HTML/CSS e Git, preparando para alta empregabilidade no mercado de TI. Participei de projetos práticos que consolidaram minha base em desenvolvimento full-stack e arquitetura de sistemas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção Experiência -->
+    <section id="experience" class="container">
+      <h2 class="primary-heading">Experiência</h2>
+      <div class="card-items">
+        <div class="card-item">
+          <div class="card-header">
+            <div class="card-content">
+              <div><img src="assets/experience/trt7-logo.png" alt="Logo TRT7" /></div>
+              <div class="card-info">
+                <div class="card-title">Estagiário de Suporte de TI</div>
+                <div class="card-subtitle">Tribunal Regional do Trabalho da 7ª Região</div>
+              </div>
+            </div>
+            <div class="card-date">Maio 2025 - Presente</div>
+          </div>
+          <p>
+            Durante minha experiência na área de suporte técnico, atuei no atendimento a chamados, realizando instalação e configuração de softwares, manutenção básica de computadores, testes de rede e internet, além de auxiliar na identificação e solução de problemas de hardware. Também prestei suporte a impressoras e periféricos e colaborei no controle de inventário de TI, desenvolvendo habilidades práticas em atendimento ao usuário, infraestrutura tecnológica e gestão de ativos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <div id="contact" class="container">
+        <h2>Contato</h2>
+        <p>
+          Sou um estudante de Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento web e experiência prática em projetos acadêmicos e pessoais, como uma biblioteca virtual e a criação de identidade visual e landing page para sistemas. Atualmente atuo com suporte técnico, mas meu objetivo é trabalhar construindo aplicações web bem estruturadas, escaláveis e fáceis de usar. Gosto de aprender coisas novas, colaborar em equipe e trazer um pouco da minha paixão por cultura pop, filmes, séries, música e games para as experiências que crio.
+        </p>
+        <div class="email-container">
+          <a href="mailto:mikhaeldev@icloud.com" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+            <img src="assets/footer/contact/mail.svg" alt="Email" />
+            <p>mikhaeldev@icloud.com</p>
+          </a>
+        </div>
+        <div class="social-links">
+          <div>
+            <a href="https://www.instagram.com/mikhaelvinicius">
+              <img src="assets/footer/contact/instagram.svg" alt="Instagram" />
+            </a>
+          </div>
+            <div>
+              <a href="https://www.linkedin.com/in/mikhaelvinicius">
+              <img src="assets/footer/contact/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/mikhaelviniciusm">
+              <img src="assets/footer/contact/github.svg" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-made">Feito com<span class="heart-wrapper"><img src="assets/footer/heart.svg" alt="" class="heart-icon" /></span>por Mikhael Vinícius</div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/main.js"></script>
+</html>

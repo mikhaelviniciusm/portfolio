@@ -1,0 +1,29 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Logs e temporarios
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Editores
+.vscode/
+.idea/
+
+# Dependencias e builds
+node_modules/
+dist/
+build/
+.cache/
+
+# Variaveis de ambiente
+.env
+.env.*
+*.local
+
+# Testes e coverage
+coverage/
+*.lcov
