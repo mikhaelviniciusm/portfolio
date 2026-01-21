@@ -5,7 +5,7 @@ Site estático em HTML, CSS e JavaScript para apresentar informações, projetos
 ## Recursos
 - Seções: Início, Sobre mim, Stacks mais usadas, Projetos, Formação, Experiência e Contato
 - Modo claro/escuro com preferência salva em localStorage
-- Menu responsivo com hambúrguer, ripple em botoes e animações simples
+- Menu responsivo com hambúrguer, ripple em botões e animações simples
 - Avatares e elementos interativos (corações no rodapé)
 - Layout responsivo e fontes Google (Poppins)
 
@@ -35,8 +35,8 @@ Site estático em HTML, CSS e JavaScript para apresentar informações, projetos
 3) Acesse http://localhost:8000.
 
 ## Como publicar no GitHub Pages
-1) Crie o repositorio no GitHub.
-2) Envie os arquivos (veja o proximo tópico).
+1) Crie o repositório no GitHub.
+2) Envie os arquivos (veja o próximo tópico).
 3) No GitHub: Settings -> Pages -> Source: Deploy from a branch; Branch: main (ou master), pasta / (root); salve.
 4) Aguarde o deploy e abra a URL indicada pelo GitHub Pages.
 
@@ -52,7 +52,7 @@ git push -u origin main
 
 ## Customização
 - Conteúdo: edite textos e imagens em index.html e na pasta assets/.
-- Estilo: ajuste cores, espaçaamentos e temas em css/style.css.
+- Estilo: ajuste cores, espaçamentos e temas em css/style.css.
 - Interação: personalize animações e comportamento em js/main.js.
 
 ## Licença
