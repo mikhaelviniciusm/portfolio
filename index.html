@@ -12,7 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>Portifólio de Mikhael</title>
+    <title>Portfólio de Mikhael</title>
+    <script>
+      // Desabilita zoom por gestos e double-tap
+      document.addEventListener('gesturestart', (e) => e.preventDefault());
+      document.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 1) e.preventDefault();
+      }, { passive: false });
+    </script>
   </head>
   
   <body>
@@ -54,8 +61,8 @@
       <div class="home-text">
         <h1>Olá Mundo!<br /> Eu sou o <span>Mikhael.</span></h1>
         <div class="home-btn">
-          <button class="btn-primary"><img src="assets/projects/external-link.svg" alt="Currículo">Currículo</button>
-            <a href="https://github.com/mikhaelviniciusm" class="btn-secondary" target="_blank" rel="noopener noreferrer"><img src="assets/projects/github.svg" alt="GitHub">GitHub</a>
+            <a href="assets/header/Currículo Mikhael.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer"><img src="assets/projects/external-link.svg" alt="Currículo">Currículo</a>
+          <a href="https://github.com/mikhaelviniciusm" class="btn-secondary" target="_blank" rel="noopener noreferrer"><img src="assets/projects/github.svg" alt="GitHub">GitHub</a>
         </div>
       </div>
     </section>
@@ -109,10 +116,10 @@
       <div class="projects">
         
         <div class="project-item">
-          <img src="assets/projects/portifolio.png" alt="Projeto de Portifólio" />
+          <img src="assets/projects/portfolio.png" alt="Projeto de Portfólio" />
           <div class="project-content">
             <div class="project-header">
-              <h3>Portifólio</h3>
+              <h3>Portfólio</h3>
             </div>
             <p class="project-description">Portfólio pessoal desenvolvido com HTML, CSS e JavaScript para apresentar projetos, habilidades e contato. Foco em design responsivo, acessibilidade e experiência do usuário.</p>
             <div class="project-tags">
@@ -122,7 +129,7 @@
             </div>
             <div class="project-links">
               <a href="#" class="btn-project"><img src="assets/projects/external-link.svg" alt="Botão Demo">Demo</a>
-              <a href="LINK" class="btn-project github"><img src="assets/projects/github.svg" alt="Botão GitHub">GitHub</a>
+              <a href="https://github.com/mikhaelviniciusm/portfolio" class="btn-project github"><img src="assets/projects/github.svg" alt="Botão GitHub">GitHub</a>
             </div>
           </div>
         </div>

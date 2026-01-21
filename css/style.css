@@ -190,6 +190,10 @@ nav {
 
 html {
   scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+body {
+  touch-action: manipulation;
 }
 section {
   scroll-margin-top: 100px;
