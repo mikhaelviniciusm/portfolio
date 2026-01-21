@@ -16,13 +16,6 @@ const applyTheme = (theme, { persist = false, animate = false } = {}) => {
 
   document.documentElement.setAttribute('data-theme', theme);
 
-  // Atualiza a cor da barra de status/navegação do navegador
-  const themeColor = theme === 'dark' ? '#19191ab3' : '#ffffffd1';
-  let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-  if (metaThemeColor) {
-    metaThemeColor.setAttribute('content', themeColor);
-  }
-
   if (themeToggleBtn) {
     const label = theme === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro';
     themeToggleBtn.setAttribute('aria-label', label);
