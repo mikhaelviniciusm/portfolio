@@ -1,0 +1,24 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mikhael-portfolio
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - aio_network
+    labels:
+      - "traefik.enable=true"
+      # Exclusivamente para portfolio.mikhael.dev.br
+      - "traefik.http.routers.portfolio.rule=Host(`portfolio.mikhael.dev.br`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+    environment:
+      - TZ=America/Fortaleza
+
+networks:
+  aio_network:
+    external: true
