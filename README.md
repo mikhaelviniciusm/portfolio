@@ -37,11 +37,6 @@ O comando `npm run build` gera a pasta estática `out/` pronta para publicação
 
 ## Personalização Rápida
 
-1. **Atualizar dados profissionais, datas, projetos ou links:** edite [`src/data/profile.ts`](src/data/profile.ts). Os campos marcados com `// TODO: Revisar com dados do LinkedIn` indicam informações que aguardam confirmação de datas exatas (como início na **DK Systems** e término no **TRT-7**).
+1. **Atualizar dados profissionais, datas, projetos ou links:** edite [`src/data/profile.ts`](src/data/profile.ts).
 2. **Ajustar textos da interface (`PT-BR` / `EN`):** edite [`src/i18n/translations.ts`](src/i18n/translations.ts).
 3. **Atualizar e-mail ou URL de currículo PDF:** ajuste `PROFILE_CONTACT.email` e `PROFILE_CONTACT.resumeUrl` em [`src/data/profile.ts`](src/data/profile.ts) e o schema JSON-LD em [`src/app/layout.tsx`](src/app/layout.tsx).
-
-## Deploy Estático
-
-- **GitHub Pages:** publique o conteúdo gerado na pasta `out/` usando um workflow oficial do GitHub Actions (`actions/upload-pages-artifact` apontando para `./out`) ou branch `gh-pages`. Lembre-se de incluir um arquivo vazio `.nojekyll` em `public/` caso o repositório não use GitHub Actions oficial de Next.js.
-- **Vercel:** importe o repositório diretamente; a Vercel detecta Next.js automaticamente. Se desejar hospedar apenas arquivos estáticos, defina o diretório de saída como `out`.
