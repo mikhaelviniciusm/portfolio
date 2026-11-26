@@ -56,7 +56,7 @@ export const PROFILE_CONTACT = {
   fullName: "Mikhael Vinicius Martins de Lima",
   brandHandle: "mikhael.dev",
   monogram: "MV",
-  email: "contato@mikhael.dev.br",
+  email: "email@mikhael.dev.br",
   location: {
     city: "Maracanaú / Fortaleza",
     state: "CE",

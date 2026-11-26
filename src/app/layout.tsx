@@ -107,7 +107,7 @@ const personJsonLd = {
     "Desenvolvedor Full-Stack & iOS | Monitor de Sistemas SAP e Especialista em Infraestrutura",
   description: siteDescription,
   url: siteUrl,
-  email: "mailto:contato@mikhael.dev.br",
+  email: "mailto:email@mikhael.dev.br",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Maracanaú",

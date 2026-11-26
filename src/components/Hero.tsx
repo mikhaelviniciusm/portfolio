@@ -148,7 +148,10 @@ export function Hero() {
               <div className="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
                 <div className="flex items-center gap-2 font-mono text-xs text-[var(--text-muted)]">
                   <Terminal className="h-4 w-4 text-[var(--accent-cyan-text)]" aria-hidden="true" />
-                  <span>{t.hero.telemetryLabel}</span>
+                  <span>
+                    {t.hero.telemetryLabel}
+                    <span aria-hidden="true" className="terminal-cursor" />
+                  </span>
                 </div>
                 <span className="rounded-full bg-[var(--accent-cyan-soft)] px-2.5 py-0.5 font-mono text-[11px] font-medium text-[var(--accent-cyan-text)]">
                   v2.0
@@ -192,7 +195,7 @@ export function Hero() {
                     {CORE_CHIPS.map((chip) => (
                       <span
                         key={chip}
-                        className="rounded-md border border-[var(--border-subtle)] bg-[var(--bg-surface-elevated)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-secondary)]"
+                        className="rounded-md border border-[var(--border-subtle)] bg-[var(--bg-surface-elevated)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-secondary)] transition-colors duration-150 hover:border-[var(--accent-text)] hover:text-[var(--text-primary)]"
                       >
                         {chip}
                       </span>
