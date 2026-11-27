@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   Award,
   Briefcase,
@@ -25,6 +26,7 @@ type TimelineFilter = "all" | "work" | "education";
 // Timeline interativa unificando experiência profissional, formação acadêmica e certificações.
 export function ExperienceTimeline() {
   const { locale, t } = useAppPreferences();
+  const prefersReducedMotion = useReducedMotion();
   const [filter, setFilter] = useState<TimelineFilter>("all");
   const [expandedIds, setExpandedIds] = useState<Record<string, boolean>>({
     "dk-systems-sap": true,
@@ -140,10 +142,10 @@ export function ExperienceTimeline() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="border-b border-[var(--border-subtle)] py-12 sm:py-16"
+      className="border-b border-[var(--border-subtle)] py-14 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end lg:gap-8">
           <Reveal>
             <SectionHeading
               index={t.experience.index}
@@ -154,11 +156,11 @@ export function ExperienceTimeline() {
           </Reveal>
 
           {/* Filtros da timeline */}
-          <Reveal delay={0.06} className="mb-10">
+          <Reveal delay={0.06} className="mb-8 shrink-0">
             <div
               role="group"
               aria-label={t.experience.title}
-              className="inline-flex flex-wrap gap-1.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-1"
+              className="inline-flex w-fit flex-wrap items-center gap-1 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-1 sm:flex-nowrap"
             >
               {(
                 [
@@ -172,7 +174,7 @@ export function ExperienceTimeline() {
                   type="button"
                   onClick={() => setFilter(tab.id)}
                   aria-pressed={filter === tab.id}
-                  className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${
+                  className={`rounded-lg px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-colors ${
                     filter === tab.id
                       ? "bg-[var(--accent-primary)] text-white"
                       : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
@@ -185,47 +187,58 @@ export function ExperienceTimeline() {
           </Reveal>
         </div>
 
-        {/* Linha do tempo */}
-        <div className="space-y-12">
-          {showWork ? (
-            <div>
-              <h3 className="mb-6 font-mono text-xs font-medium text-[var(--text-muted)]">
-                {t.experience.workHeading}
-              </h3>
-              <ol className="relative ml-3 space-y-6 border-l border-[var(--border-subtle)]">
-                {EXPERIENCES.map(renderTimelineItem)}
-              </ol>
-            </div>
-          ) : null}
-
-          {showEducation ? (
-            <div className="space-y-10">
+        {/* Linha do tempo com transição suave ao trocar de aba */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={filter}
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={prefersReducedMotion ? undefined : { opacity: 0, y: -6 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-12"
+          >
+            {showWork ? (
               <div>
                 <h3 className="mb-6 font-mono text-xs font-medium text-[var(--text-muted)]">
-                  {t.experience.educationHeading}
+                  {t.experience.workHeading}
                 </h3>
                 <ol className="relative ml-3 space-y-6 border-l border-[var(--border-subtle)]">
-                  {EDUCATION.map(renderTimelineItem)}
+                  {EXPERIENCES.map(renderTimelineItem)}
                 </ol>
               </div>
+            ) : null}
 
-              <div>
-                <h3 className="mb-5 font-mono text-xs font-medium text-[var(--text-muted)]">
-                  {t.experience.certificationsHeading}
-                </h3>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  {CERTIFICATIONS.map((cert) => (
-                    <SpotlightCard key={cert.id} className="p-5">
-                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                        <div className="flex items-start gap-3">
-                          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--bg-surface-elevated)] text-[var(--text-secondary)]">
-                            <Award className="h-4 w-4" aria-hidden="true" />
-                          </span>
+            {showEducation ? (
+              <div className="space-y-10">
+                <div>
+                  <h3 className="mb-6 font-mono text-xs font-medium text-[var(--text-muted)]">
+                    {t.experience.educationHeading}
+                  </h3>
+                  <ol className="relative ml-3 space-y-6 border-l border-[var(--border-subtle)]">
+                    {EDUCATION.map(renderTimelineItem)}
+                  </ol>
+                </div>
+
+                <div>
+                  <h3 className="mb-4 font-mono text-xs font-medium text-[var(--text-muted)]">
+                    {t.experience.certificationsHeading}
+                  </h3>
+                  <ul className="divide-y divide-[var(--border-subtle)] overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)]">
+                    {CERTIFICATIONS.map((cert) => (
+                      <li
+                        key={cert.id}
+                        className="flex flex-col gap-3 px-5 py-4 transition-colors hover:bg-[var(--bg-surface-hover)] sm:flex-row sm:items-center sm:justify-between"
+                      >
+                        <div className="flex items-start gap-3 sm:items-center">
+                          <Award
+                            className="mt-0.5 h-4 w-4 shrink-0 text-[var(--text-muted)] sm:mt-0"
+                            aria-hidden="true"
+                          />
                           <div>
                             <h4 className="text-sm font-semibold text-[var(--text-primary)]">
                               {cert.title[locale]}
                             </h4>
-                            <p className="mt-1 font-mono text-xs text-[var(--text-muted)]">
+                            <p className="mt-0.5 font-mono text-xs text-[var(--text-muted)] tabular-nums">
                               {cert.issuer} · {cert.year}
                               {cert.workload ? ` · ${cert.workload[locale]}` : ""}
                             </p>
@@ -237,19 +250,19 @@ export function ExperienceTimeline() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${t.experience.verifyCredential}: ${cert.title[locale]}`}
-                          className="inline-flex shrink-0 self-start items-center gap-1 rounded-md border border-[var(--border-subtle)] px-2.5 py-1 font-mono text-[11px] font-medium text-[var(--accent-text)] transition-colors hover:border-[var(--accent-text)] sm:self-auto"
+                          className="link-underline inline-flex shrink-0 self-start items-center gap-1.5 font-mono text-xs font-medium text-[var(--accent-text)] sm:self-auto"
                         >
                           <span>{t.experience.verifyCredential}</span>
-                          <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                          <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                         </a>
-                      </div>
-                    </SpotlightCard>
-                  ))}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            </div>
-          ) : null}
-        </div>
+            ) : null}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

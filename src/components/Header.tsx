@@ -2,14 +2,18 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Command, Menu, Moon, Sun, X } from "lucide-react";
 import { PROFILE_CONTACT } from "@/data/profile";
 import { useAppPreferences } from "@/context/AppPreferencesContext";
 
 const SECTION_IDS = ["about", "experience", "projects", "stack", "contact"] as const;
 
-// Cabeçalho fixo com glassmorphism, navegação suave, alternadores de tema/idioma e CTA de currículo.
-export function Header() {
+interface HeaderProps {
+  onOpenCommandPalette?: () => void;
+}
+
+// Cabeçalho fixo com navegação quieta, atalho ⌘K e alternadores de tema/idioma.
+export function Header({ onOpenCommandPalette }: HeaderProps) {
   const { theme, locale, t, toggleTheme, setLocale } = useAppPreferences();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
@@ -65,7 +69,7 @@ export function Header() {
   }, [mobileMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)]/95 backdrop-blur-sm transition-colors duration-200">
+    <header className="sticky top-0 z-50 border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)]/80 backdrop-blur-md transition-colors duration-200">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Logo tipográfico com ícone SVG */}
         <a
@@ -107,19 +111,31 @@ export function Header() {
           })}
         </nav>
 
-        {/* Controles e CTA principal */}
+        {/* Controles à direita */}
         <div className="hidden items-center gap-2 lg:flex">
+          {onOpenCommandPalette ? (
+            <button
+              type="button"
+              onClick={onOpenCommandPalette}
+              aria-label={t.command.triggerLabel}
+              className="inline-flex h-9 items-center gap-2 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-2.5 font-mono text-xs text-[var(--text-muted)] transition-colors hover:border-[var(--border-strong)] hover:text-[var(--text-primary)]"
+            >
+              <Command className="h-3.5 w-3.5" aria-hidden="true" />
+              <kbd className="text-[11px] font-medium">K</kbd>
+            </button>
+          ) : null}
+
           {/* Seletor de idioma PT-BR / EN */}
           <div
             role="group"
             aria-label={t.a11y.switchLanguage}
-            className="flex items-center rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-0.5 font-mono text-xs"
+            className="flex h-9 items-center rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-0.5 font-mono text-xs"
           >
             <button
               type="button"
               onClick={() => setLocale("pt-BR")}
               aria-pressed={locale === "pt-BR"}
-              className={`rounded-md px-2 py-1 font-medium transition-colors ${
+              className={`flex h-full items-center rounded-md px-2.5 font-medium transition-colors ${
                 locale === "pt-BR"
                   ? "bg-[var(--accent-soft)] text-[var(--accent-text)]"
                   : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
@@ -131,7 +147,7 @@ export function Header() {
               type="button"
               onClick={() => setLocale("en")}
               aria-pressed={locale === "en"}
-              className={`rounded-md px-2 py-1 font-medium transition-colors ${
+              className={`flex h-full items-center rounded-md px-2.5 font-medium transition-colors ${
                 locale === "en"
                   ? "bg-[var(--accent-soft)] text-[var(--accent-text)]"
                   : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"

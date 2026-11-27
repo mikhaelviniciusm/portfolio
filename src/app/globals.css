@@ -27,6 +27,7 @@
   --accent-cyan: #2563eb;
   --accent-cyan-text: #1d4ed8;
   --accent-cyan-soft: rgba(37, 99, 235, 0.08);
+  --grid-line: rgba(15, 23, 42, 0.045);
   color-scheme: light;
 }
 
@@ -49,6 +50,7 @@
   --accent-cyan: #3b82f6;
   --accent-cyan-text: #60a5fa;
   --accent-cyan-soft: rgba(59, 130, 246, 0.12);
+  --grid-line: rgba(248, 250, 252, 0.035);
   color-scheme: dark;
 }
 
@@ -60,6 +62,11 @@ html {
 
 body {
   background-color: var(--bg-canvas);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
   color: var(--text-primary);
   font-family: var(--font-sans);
   transition: background-color 200ms ease, color 200ms ease;
@@ -134,19 +141,74 @@ section[id] {
   border-color: var(--border-strong);
 }
 
-/* Animação suave de entrada ao rolar sem emitir opacity:0 no SSR */
-.reveal-pending {
-  opacity: 0;
-  transform: translate3d(0, 14px, 0);
-  will-change: opacity, transform;
+/* Elevação sutil apenas para cards de projetos/links */
+.card-interactive {
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition:
-    opacity 420ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+.card-interactive:hover {
+  transform: translateY(-2px);
+}
+
+/* Sublinhado editorial animado no hover */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* Pulso contínuo nas conexões do micro-diagrama do Control Plane */
+@keyframes signalFlow {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.signal-line {
+  stroke-dasharray: 4 8;
+  animation: signalFlow 3.2s linear infinite;
+}
+
+/* Assentamento discreto do Hero na carga inicial sem ocultar conteúdo */
+@keyframes heroSettle {
+  from {
+    transform: translate3d(0, 6px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-enter {
+  animation: heroSettle 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Entrada única e contida do Hero na carga inicial */
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-enter {
+  animation: heroEnter 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -154,9 +216,8 @@ section[id] {
     scroll-behavior: auto;
   }
 
-  .reveal-pending {
-    opacity: 1;
-    transform: none;
+  .hero-enter {
+    animation: none;
   }
 
   *,

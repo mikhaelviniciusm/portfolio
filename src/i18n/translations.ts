@@ -37,6 +37,9 @@ export interface TranslationDictionary {
     telemetryLanguageLabel: string;
     telemetryLanguageValue: string;
     telemetryStackLabel: string;
+    telemetryTabProfile: string;
+    telemetryTabHighlights: string;
+    telemetryHighlightsIntro: string;
   };
   about: {
     index: string;
@@ -115,6 +118,21 @@ export interface TranslationDictionary {
     builtWith: string;
     backToTop: string;
   };
+  command: {
+    triggerLabel: string;
+    triggerShort: string;
+    placeholder: string;
+    empty: string;
+    groupNavigate: string;
+    groupActions: string;
+    groupLinks: string;
+    actionCopyEmail: string;
+    actionToggleTheme: string;
+    actionToggleLocale: string;
+    actionResume: string;
+    hintClose: string;
+    hintSelect: string;
+  };
 }
 
 export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
@@ -157,6 +175,9 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       telemetryLanguageLabel: "idiomas",
       telemetryLanguageValue: "Português (Nativo) · Inglês C1 (EF SET)",
       telemetryStackLabel: "stack_núcleo",
+      telemetryTabProfile: "perfil",
+      telemetryTabHighlights: "sistemas",
+      telemetryHighlightsIntro: "Sistemas e apps em destaque",
     },
     about: {
       index: "01 · Sobre",
@@ -267,6 +288,21 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       builtWith: "Desenvolvido por Mikhael Vinícius com Next.js, TypeScript e Tailwind CSS.",
       backToTop: "Voltar ao topo",
     },
+    command: {
+      triggerLabel: "Abrir paleta de comandos (Ctrl K)",
+      triggerShort: "Comandos",
+      placeholder: "Ir para seção ou executar ação...",
+      empty: "Nenhum comando encontrado",
+      groupNavigate: "Navegar",
+      groupActions: "Ações rápidas",
+      groupLinks: "Links externos",
+      actionCopyEmail: "Copiar e-mail de contato",
+      actionToggleTheme: "Alternar tema claro / escuro",
+      actionToggleLocale: "Alternar idioma (PT-BR / EN)",
+      actionResume: "Baixar Currículo (PDF)",
+      hintClose: "fechar",
+      hintSelect: "executar",
+    },
   },
   en: {
     a11y: {
@@ -307,6 +343,9 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       telemetryLanguageLabel: "languages",
       telemetryLanguageValue: "Portuguese (Native) · English C1 (EF SET)",
       telemetryStackLabel: "core_stack",
+      telemetryTabProfile: "profile",
+      telemetryTabHighlights: "systems",
+      telemetryHighlightsIntro: "Featured systems & apps",
     },
     about: {
       index: "01 · About",
@@ -416,6 +455,21 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
     footer: {
       builtWith: "Crafted by Mikhael Vinícius using Next.js, TypeScript, and Tailwind CSS.",
       backToTop: "Back to top",
+    },
+    command: {
+      triggerLabel: "Open command palette (Ctrl K)",
+      triggerShort: "Commands",
+      placeholder: "Jump to section or run action...",
+      empty: "No matching command",
+      groupNavigate: "Navigate",
+      groupActions: "Quick actions",
+      groupLinks: "External links",
+      actionCopyEmail: "Copy contact email",
+      actionToggleTheme: "Toggle light / dark theme",
+      actionToggleLocale: "Switch language (PT-BR / EN)",
+      actionResume: "Download Resume (PDF)",
+      hintClose: "close",
+      hintSelect: "select",
     },
   },
 };
