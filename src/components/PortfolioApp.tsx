@@ -12,7 +12,6 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProjectsShowcase } from "@/components/ProjectsShowcase";
 import { TechStack } from "@/components/TechStack";
-import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 function PortfolioShell() {
@@ -20,7 +19,6 @@ function PortfolioShell() {
 
   return (
     <>
-      <AnimatedBackground />
       <ScrollProgress />
       <a href="#main-content" className="skip-link">
         {t.a11y.skipToContent}

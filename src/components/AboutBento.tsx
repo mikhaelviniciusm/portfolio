@@ -42,10 +42,10 @@ export function AboutBento() {
           <Reveal className="md:col-span-7">
             <SpotlightCard className="flex h-full flex-col justify-between p-6 sm:p-8">
               <div>
-                <p className="font-mono text-xs font-medium text-[var(--accent-text)] uppercase">
+                <p className="font-mono text-xs font-medium text-[var(--text-muted)]">
                   {t.about.mainEyebrow}
                 </p>
-                <h3 className="mt-2 text-xl font-bold tracking-tight text-[var(--text-primary)] sm:text-2xl">
+                <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text-primary)] sm:text-2xl">
                   {t.about.mainTitle}
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-[var(--text-secondary)] sm:text-base">
@@ -76,14 +76,14 @@ export function AboutBento() {
               <SpotlightCard className="p-6">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="font-mono text-xs font-medium text-[var(--accent-cyan-text)] uppercase">
+                    <p className="font-mono text-xs font-medium text-[var(--text-muted)]">
                       {t.about.locationEyebrow}
                     </p>
-                    <h3 className="mt-2 text-xl font-bold text-[var(--text-primary)]">
+                    <h3 className="mt-2 text-xl font-semibold text-[var(--text-primary)]">
                       {t.about.locationTitle}
                     </h3>
                   </div>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-cyan-soft)] text-[var(--accent-cyan-text)]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--bg-surface-elevated)] text-[var(--text-secondary)]">
                     <MapPin className="h-5 w-5" aria-hidden="true" />
                   </span>
                 </div>
@@ -101,14 +101,14 @@ export function AboutBento() {
               <SpotlightCard className="p-6">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="font-mono text-xs font-medium text-[var(--accent-text)] uppercase">
+                    <p className="font-mono text-xs font-medium text-[var(--text-muted)]">
                       {t.about.languageEyebrow}
                     </p>
-                    <h3 className="mt-2 text-lg font-bold text-[var(--text-primary)]">
+                    <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
                       {t.about.languageTitle}
                     </h3>
                   </div>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-soft)] text-[var(--accent-text)]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--bg-surface-elevated)] text-[var(--text-secondary)]">
                     <Languages className="h-5 w-5" aria-hidden="true" />
                   </span>
                 </div>
@@ -133,12 +133,12 @@ export function AboutBento() {
           <Reveal delay={0.08} className="md:col-span-5">
             <SpotlightCard className="h-full p-6">
               <div className="flex items-center gap-2.5">
-                <Compass className="h-5 w-5 text-[var(--accent-cyan-text)]" aria-hidden="true" />
-                <p className="font-mono text-xs font-medium text-[var(--accent-cyan-text)] uppercase">
+                <Compass className="h-4 w-4 text-[var(--text-muted)]" aria-hidden="true" />
+                <p className="font-mono text-xs font-medium text-[var(--text-muted)]">
                   {t.about.focusEyebrow}
                 </p>
               </div>
-              <h3 className="mt-2 text-lg font-bold text-[var(--text-primary)]">
+              <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
                 {t.about.focusTitle}
               </h3>
               <ul className="mt-4 space-y-2.5">
@@ -162,12 +162,12 @@ export function AboutBento() {
           <Reveal delay={0.12} className="md:col-span-7">
             <SpotlightCard className="h-full p-6">
               <div className="flex items-center gap-2.5">
-                <ShieldCheck className="h-5 w-5 text-[var(--accent-text)]" aria-hidden="true" />
-                <p className="font-mono text-xs font-medium text-[var(--accent-text)] uppercase">
+                <ShieldCheck className="h-4 w-4 text-[var(--text-muted)]" aria-hidden="true" />
+                <p className="font-mono text-xs font-medium text-[var(--text-muted)]">
                   {t.about.mindsetEyebrow}
                 </p>
               </div>
-              <h3 className="mt-2 text-lg font-bold text-[var(--text-primary)]">
+              <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
                 {t.about.mindsetTitle}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">

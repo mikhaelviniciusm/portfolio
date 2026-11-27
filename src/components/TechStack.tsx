@@ -42,10 +42,10 @@ export function TechStack() {
                 <SpotlightCard className="flex h-full flex-col justify-between p-6">
                   <div>
                     <div className="flex items-center gap-3">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-soft)] text-[var(--accent-text)]">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--bg-surface-elevated)] text-[var(--text-secondary)]">
                         <Icon className="h-5 w-5" aria-hidden="true" />
                       </span>
-                      <h3 className="text-lg font-bold text-[var(--text-primary)]">
+                      <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                         {group.title[locale]}
                       </h3>
                     </div>

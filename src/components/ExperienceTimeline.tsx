@@ -65,7 +65,7 @@ export function ExperienceTimeline() {
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <div className="flex flex-wrap items-center gap-2">
-                <h3 className="text-lg font-bold text-[var(--text-primary)]">
+                <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                   {item.role[locale]}
                 </h3>
                 {item.current ? (
@@ -189,7 +189,7 @@ export function ExperienceTimeline() {
         <div className="space-y-12">
           {showWork ? (
             <div>
-              <h3 className="mb-6 font-mono text-xs font-semibold tracking-wider text-[var(--text-muted)] uppercase">
+              <h3 className="mb-6 font-mono text-xs font-medium text-[var(--text-muted)]">
                 {t.experience.workHeading}
               </h3>
               <ol className="relative ml-3 space-y-6 border-l border-[var(--border-subtle)]">
@@ -201,7 +201,7 @@ export function ExperienceTimeline() {
           {showEducation ? (
             <div className="space-y-10">
               <div>
-                <h3 className="mb-6 font-mono text-xs font-semibold tracking-wider text-[var(--text-muted)] uppercase">
+                <h3 className="mb-6 font-mono text-xs font-medium text-[var(--text-muted)]">
                   {t.experience.educationHeading}
                 </h3>
                 <ol className="relative ml-3 space-y-6 border-l border-[var(--border-subtle)]">
@@ -210,7 +210,7 @@ export function ExperienceTimeline() {
               </div>
 
               <div>
-                <h3 className="mb-5 font-mono text-xs font-semibold tracking-wider text-[var(--text-muted)] uppercase">
+                <h3 className="mb-5 font-mono text-xs font-medium text-[var(--text-muted)]">
                   {t.experience.certificationsHeading}
                 </h3>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -218,11 +218,11 @@ export function ExperienceTimeline() {
                     <SpotlightCard key={cert.id} className="p-5">
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div className="flex items-start gap-3">
-                          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-soft)] text-[var(--accent-text)]">
+                          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--bg-surface-elevated)] text-[var(--text-secondary)]">
                             <Award className="h-4 w-4" aria-hidden="true" />
                           </span>
                           <div>
-                            <h4 className="text-sm font-bold text-[var(--text-primary)]">
+                            <h4 className="text-sm font-semibold text-[var(--text-primary)]">
                               {cert.title[locale]}
                             </h4>
                             <p className="mt-1 font-mono text-xs text-[var(--text-muted)]">

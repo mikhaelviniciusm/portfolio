@@ -48,21 +48,12 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="relative overflow-hidden border-b border-[var(--border-subtle)] py-16 sm:py-24 lg:py-28"
     >
-      {/* Grade pontilhada sutil mascarada apenas no fundo do Hero */}
-      <div
-        aria-hidden="true"
-        className="hero-dot-grid pointer-events-none absolute inset-0 opacity-80"
-      />
-
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
         {/* Coluna editorial principal */}
         <div className="lg:col-span-7">
           <Reveal>
             <div className="inline-flex items-center gap-2.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3.5 py-1.5">
-              <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-              </span>
+              <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
               <span className="font-mono text-xs font-medium text-[var(--text-secondary)]">
                 {t.hero.statusBadge}
               </span>
@@ -70,16 +61,16 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.05}>
-            <p className="mt-6 font-mono text-sm font-medium text-[var(--accent-cyan-text)]">
+            <p className="mt-6 font-mono text-sm font-medium text-[var(--text-muted)]">
               {t.hero.headlinePrefix}
             </p>
             <h1
               id="hero-heading"
-              className="mt-2 text-4xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-6xl"
+              className="mt-2 text-4xl font-semibold tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-6xl"
             >
               {PROFILE_CONTACT.displayName}
             </h1>
-            <p className="mt-4 text-lg font-semibold leading-snug text-[var(--accent-text)] sm:text-xl">
+            <p className="mt-4 text-lg font-medium leading-snug text-[var(--accent-text)] sm:text-xl">
               {t.hero.roleTitle}
             </p>
           </Reveal>
@@ -147,13 +138,10 @@ export function Hero() {
             <SpotlightCard className="p-6">
               <div className="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
                 <div className="flex items-center gap-2 font-mono text-xs text-[var(--text-muted)]">
-                  <Terminal className="h-4 w-4 text-[var(--accent-cyan-text)]" aria-hidden="true" />
-                  <span>
-                    {t.hero.telemetryLabel}
-                    <span aria-hidden="true" className="terminal-cursor" />
-                  </span>
+                  <Terminal className="h-4 w-4 text-[var(--text-muted)]" aria-hidden="true" />
+                  <span>{t.hero.telemetryLabel}</span>
                 </div>
-                <span className="rounded-full bg-[var(--accent-cyan-soft)] px-2.5 py-0.5 font-mono text-[11px] font-medium text-[var(--accent-cyan-text)]">
+                <span className="font-mono text-xs font-medium text-[var(--text-muted)] tabular-nums">
                   v2.0
                 </span>
               </div>

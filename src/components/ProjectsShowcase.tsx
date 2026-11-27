@@ -117,18 +117,18 @@ export function ProjectsShowcase() {
                   >
                     <div>
                       <div className="flex flex-wrap items-center justify-between gap-2">
-                        <p className="font-mono text-[11px] font-medium text-[var(--accent-cyan-text)] uppercase">
+                        <p className="font-mono text-xs font-medium text-[var(--text-muted)]">
                           {project.eyebrow[locale]}
                         </p>
                         {project.featured ? (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-[var(--accent-soft)] px-2.5 py-0.5 font-mono text-[11px] font-semibold text-[var(--accent-text)]">
+                          <span className="inline-flex items-center gap-1 rounded-full bg-[var(--accent-soft)] px-2.5 py-0.5 font-mono text-[11px] font-medium text-[var(--accent-text)]">
                             <Layers className="h-3 w-3" aria-hidden="true" />
                             <span>{t.projects.featuredBadge}</span>
                           </span>
                         ) : null}
                       </div>
 
-                      <h3 className="mt-3 text-xl font-bold tracking-tight text-[var(--text-primary)]">
+                      <h3 className="mt-3 text-xl font-semibold tracking-tight text-[var(--text-primary)]">
                         {project.title[locale]}
                       </h3>
 

@@ -5,7 +5,7 @@ interface SectionHeadingProps {
   headingId: string;
 }
 
-// Cabeçalho padrão de seção com índice monospace e hierarquia tipográfica clara.
+// Cabeçalho padrão de seção com hierarquia por tamanho e contraste.
 export function SectionHeading({
   index,
   title,
@@ -13,13 +13,13 @@ export function SectionHeading({
   headingId,
 }: SectionHeadingProps) {
   return (
-    <div className="mb-10 max-w-2xl">
-      <p className="font-mono text-xs font-medium tracking-wider text-[var(--accent-cyan-text)] uppercase">
+    <div className="mb-8 max-w-2xl">
+      <p className="font-mono text-xs font-medium text-[var(--text-muted)] tabular-nums">
         {index}
       </p>
       <h2
         id={headingId}
-        className="mt-2 text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl"
+        className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text-primary)] sm:text-3xl"
       >
         {title}
       </h2>

@@ -141,7 +141,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
     },
     hero: {
       statusBadge: "Disponível para projetos & oportunidades",
-      headlinePrefix: "Olá, eu sou",
+      headlinePrefix: "Portfólio & Currículo",
       roleTitle:
         "Desenvolvedor Full-Stack & iOS | Entusiasta em Infraestrutura, Automação e Sistemas Corporativos",
       subtitle:
@@ -159,10 +159,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       telemetryStackLabel: "stack_núcleo",
     },
     about: {
-      index: "01 // SOBRE",
+      index: "01 · Sobre",
       title: "Sobre Mim",
       subtitle:
-        "Visão de operação corporativa aplicada à criação de produtos digitais rápidos, seguros e sustentáveis.",
+        "Visão de operação corporativa aplicada à criação de produtos digitais rápidos, seguros e sustentáveis",
       mainEyebrow: "Perfil Profissional",
       mainTitle: "Do monitoramento SAP à engenharia de software ponta a ponta",
       mainParagraphOne:
@@ -204,10 +204,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       viewCertificate: "Verificar certificado EF SET",
     },
     experience: {
-      index: "02 // TRAJETÓRIA",
+      index: "02 · Trajetória",
       title: "Experiência & Formação",
       subtitle:
-        "Histórico profissional em sistemas corporativos e infraestrutura, aliado à graduação tecnológica e certificações.",
+        "Histórico profissional em sistemas corporativos e infraestrutura, aliado à graduação tecnológica e certificações",
       filterAll: "Tudo",
       filterWork: "Experiência",
       filterEducation: "Formação & Certificações",
@@ -220,10 +220,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       verifyCredential: "Ver credencial",
     },
     projects: {
-      index: "03 // PROJETOS",
+      index: "03 · Projetos",
       title: "Vitrine de Projetos",
       subtitle:
-        "Aplicativos nativos, sistemas fiscais self-hosted, contribuições open source e projetos acadêmicos em produção.",
+        "Aplicativos nativos, sistemas fiscais self-hosted, contribuições open source e projetos acadêmicos em produção",
       featuredBadge: "Destaque",
       viewRepo: "Ver Código no GitHub",
       viewDemo: "Acessar Demo",
@@ -238,22 +238,22 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         count === 1 ? "1 projeto exibido" : `${count} projetos exibidos`,
     },
     stack: {
-      index: "04 // STACK & INFRA",
+      index: "04 · Stack & Infra",
       title: "Stack Tecnológica & Ferramentas",
       subtitle:
-        "Tecnologias que utilizo no desenvolvimento de aplicativos, APIs, automação de entregas e sustentação de ambientes.",
+        "Tecnologias que utilizo no desenvolvimento de aplicativos, APIs, automação de entregas e sustentação de ambientes",
     },
     contact: {
-      index: "05 // CONTATO",
-      title: "Vamos construir algo sólido?",
+      index: "05 · Contato",
+      title: "Vamos construir algo sólido",
       subtitle:
-        "Aberto a conversas sobre oportunidades em desenvolvimento Full-Stack, iOS, automação, freelances e projetos de infraestrutura.",
+        "Aberto a conversas sobre oportunidades em desenvolvimento Full-Stack, iOS, automação, freelances e projetos de infraestrutura",
       ctaHeading: "Envie uma mensagem direta",
       ctaDescription:
-        "Copie meu endereço de e-mail com um clique ou acesse diretamente meus perfis técnicos e repositórios.",
+        "Copie meu endereço de e-mail com um clique ou acesse diretamente meus perfis técnicos e repositórios",
       emailLabel: "E-mail profissional",
       copyButton: "Copiar e-mail",
-      copiedButton: "Copiado!",
+      copiedButton: "Copiado",
       sendEmailButton: "Abrir no app de e-mail",
       channelsTitle: "Canais & Repositórios",
       githubDesc: "Projetos, repositórios e contribuições de código",
@@ -291,7 +291,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
     },
     hero: {
       statusBadge: "Open to projects & new opportunities",
-      headlinePrefix: "Hi, I'm",
+      headlinePrefix: "Portfolio & Resume",
       roleTitle:
         "Full-Stack & iOS Developer | Infrastructure, Automation & Enterprise Systems Specialist",
       subtitle:
@@ -309,10 +309,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       telemetryStackLabel: "core_stack",
     },
     about: {
-      index: "01 // ABOUT",
+      index: "01 · About",
       title: "About Me",
       subtitle:
-        "Enterprise operations discipline applied to building fast, secure, and maintainable digital products.",
+        "Enterprise operations discipline applied to building fast, secure, and maintainable digital products",
       mainEyebrow: "Professional Summary",
       mainTitle: "From SAP system operations to end-to-end software engineering",
       mainParagraphOne:
@@ -354,10 +354,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       viewCertificate: "Verify EF SET certificate",
     },
     experience: {
-      index: "02 // JOURNEY",
+      index: "02 · Journey",
       title: "Experience & Education",
       subtitle:
-        "Professional track across enterprise systems and IT infrastructure alongside formal education and certifications.",
+        "Professional track across enterprise systems and IT infrastructure alongside formal education and certifications",
       filterAll: "All",
       filterWork: "Experience",
       filterEducation: "Education & Certifications",
@@ -370,10 +370,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       verifyCredential: "Verify credential",
     },
     projects: {
-      index: "03 // PROJECTS",
+      index: "03 · Projects",
       title: "Featured Projects",
       subtitle:
-        "Native mobile apps, self-hosted fiscal engines, open-source contributions, and full-stack platforms.",
+        "Native mobile apps, self-hosted fiscal engines, open-source contributions, and full-stack platforms",
       featuredBadge: "Featured",
       viewRepo: "View on GitHub",
       viewDemo: "Live Demo",
@@ -388,22 +388,22 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         count === 1 ? "Showing 1 project" : `Showing ${count} projects`,
     },
     stack: {
-      index: "04 // STACK & INFRA",
+      index: "04 · Stack & Infra",
       title: "Tech Stack & Tooling",
       subtitle:
-        "Technologies I use daily to craft apps, design APIs, automate delivery, and operate infrastructure.",
+        "Technologies I use daily to craft apps, design APIs, automate delivery, and operate infrastructure",
     },
     contact: {
-      index: "05 // CONTACT",
+      index: "05 · Contact",
       title: "Let's build something reliable",
       subtitle:
-        "Open to conversations around Full-Stack, iOS development, automation, freelance work, and infrastructure opportunities.",
+        "Open to conversations around Full-Stack, iOS development, automation, freelance work, and infrastructure opportunities",
       ctaHeading: "Reach out directly",
       ctaDescription:
-        "Copy my email address with one click or connect through any of my engineering profiles below.",
+        "Copy my email address with one click or connect through any of my engineering profiles below",
       emailLabel: "Work email",
       copyButton: "Copy email",
-      copiedButton: "Copied!",
+      copiedButton: "Copied",
       sendEmailButton: "Open mail client",
       channelsTitle: "Channels & Repositories",
       githubDesc: "Projects, repositories, and open code",

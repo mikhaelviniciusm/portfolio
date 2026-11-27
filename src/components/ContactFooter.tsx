@@ -106,7 +106,7 @@ export function ContactFooter() {
             <Reveal className="lg:col-span-6">
               <SpotlightCard className="flex h-full flex-col justify-between p-6 sm:p-8">
                 <div>
-                  <h3 className="text-xl font-bold text-[var(--text-primary)] sm:text-2xl">
+                  <h3 className="text-xl font-semibold text-[var(--text-primary)] sm:text-2xl">
                     {t.contact.ctaHeading}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)] sm:text-base">
@@ -161,7 +161,7 @@ export function ContactFooter() {
             {/* Grade de canais sociais */}
             <Reveal delay={0.08} className="lg:col-span-6">
               <SpotlightCard className="h-full p-6 sm:p-8">
-                <h3 className="font-mono text-xs font-semibold tracking-wider text-[var(--text-muted)] uppercase">
+                <h3 className="font-mono text-xs font-medium text-[var(--text-muted)]">
                   {t.contact.channelsTitle}
                 </h3>
 
